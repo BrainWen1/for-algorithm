@@ -9,7 +9,7 @@ typedef long long LL;
 
 int main(void)
 {
-	priority_queue<LL, vector<LL>, greater<LL>> heap;//小根堆 
+	priority_queue<LL, vector<LL>, greater<LL>> heap;//创建小根堆 
 	int n; cin >> n;
 	
 	for(int i = 0; i < n; i++)
@@ -19,7 +19,7 @@ int main(void)
 	}
 	
 	LL ret = 0;
-	while(heap.size() > 1)
+	while(heap.size() > 1)//最后只有一颗树包含所有元素时退出循环 
 	{
 		LL a = heap.top();//取出最小的两种字符个数 
 		heap.pop();
