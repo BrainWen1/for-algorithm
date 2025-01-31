@@ -1,5 +1,5 @@
 // P1067 [NOIP2009 普及组] 多项式输出
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -45,7 +45,7 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 // P5731 【深基5.习6】蛇形方阵
 /*#include <iostream>

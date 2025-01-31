@@ -1,16 +1,16 @@
 // 数组模拟实现静态单链表
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
-/*struct node
-{
-	int data;
-	node* next;
-}list[N];
+//struct node//结构体实现 
+//{
+//	int data;
+//	node* next;
+//}list[N];
 
 //创建链表
-const int N = 1e3 + 10;
+const int N = 1e3 + 10;//数组模拟实现 
 int Nums[N];
 int Next[N];
 int h, id;
@@ -70,7 +70,7 @@ int main(void)
 	print();
 
 	return 0;
-}*/
+}
 
 
 // 数组模拟实现静态双链表
@@ -236,78 +236,3 @@ int main(void)
 	L.push_back(0);
 	print(L);
 }*/
-
-
-//
-#include <iostream>
-
-using namespace std;
-
-const int N = 1e6 + 10;
-int peo[N], nex[N];
-int h, id;
-
-void push_back(int val)
-{
-	id++;
-	peo[id] = val;
-
-
-}
-
-int main(void)
-{
-	
-	
-	return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

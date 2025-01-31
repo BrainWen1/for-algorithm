@@ -1,5 +1,6 @@
+//哈希表 
 // 除留余数法 -- 线性探测法
-/*#include <iostream>
+#include <iostream>
 #include <cstring>
 
 using namespace std;
@@ -59,11 +60,11 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 
 // 除留余数法 -- 链地址法
-/*#include <iostream>
+#include <iostream>
 #include <cstring>
 
 using namespace std;
@@ -120,11 +121,11 @@ int main(void)
 		}
 	}
 	return 0;
-}*/
+}
 
 
 // unordered_set  unordered_multiset
-/*#include <iostream>
+#include <iostream>
 #include <unordered_set>
 
 using namespace std;
@@ -181,11 +182,11 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 
 // unordered_map  unordered_multimap
-/*#include <iostream>
+#include <iostream>
 #include <unordered_map>
 #include <string>
 
@@ -241,4 +242,4 @@ int main(void)
 	cout << "goat " << ": " << mp.count("goat") <<endl;
 
 	return 0;
-}*/
+}

@@ -1,5 +1,5 @@
 // 数组模拟实现栈
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -52,7 +52,7 @@ int main(void)
 		pop();
 	}
 	return 0;
-}*/
+}
 
 // STL中的栈stack
 /*#include <iostream>
@@ -263,79 +263,3 @@ int main(void)
 	}
 	return 0;
 }*/
-
-// P1449 后缀表达式
-#include <iostream>
-#include <stack>
-#include <string>
-
-using namespace std;
-
-int main(void)
-{
-	stack<int> nums;
-	string str;
-	
-	getline(cin, str, '@');
-	
-	int val;
-	char ch;
-	while()
-	
-	return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

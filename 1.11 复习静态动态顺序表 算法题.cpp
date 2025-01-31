@@ -1,5 +1,5 @@
 // 复习：封装静态顺序表
-/*#include <iostream>
+#include <iostream>
 #include <cstring>
 
 using namespace std;
@@ -104,95 +104,4 @@ int main(void)
 	list.print();
 	
 	return 0;
-}*/
-
-// P2433 【深基1-2】小学数学 N 合一
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <algorithm>
-
-using namespace std;
-
-const double pi = 3.141593;
-
-int main(void)
-{
-	int n;
-	cin >> n;
-	
-	switch(n)
-	{
-		case 1: cout << "I love Luogu!" << endl; break;
-		case 2: cout << "6 4" << endl; break;
-		case 3: cout << "3 12 2" << endl; break;
-		case 4: cout << fixed << setprecision(6) << 500 / 3.0 << endl; break;
-		case 5:
-		case 6: cout << sqrt(6 * 6 + 9 * 9) << endl; break;
-		case 7: cout << "110 90 0" << endl; break;
-		case 8: 
-		{
-			const int r = 5;
-			cout << 2 * pi * r << ' ' << pi * pow(r, 2) << ' ' << (4.0 / 3) * pi * pow(r, 3) << endl;
-			break;
-		}
-		case 9: cout << "22" << endl; break;
-		case 10:
-		case 11: cout << 100 / 3.0 << endl; break;
-		case 12: cout << (int)('M' - 'A' + 1) << endl << (char)('A' + 17) << endl; break;
-		case 13: 
-		{
-			const int r1 = 4, r2 = 10;
-			cout << pow((4.0 / 3) * pi * (pow(r1, 3) + pow(r2, 3)), 1.0 / 3) << endl;
-			break;
-		}
-		case 14: 
-		{
-			int ret = 1100, price = 110, prices[2], peo = 10, count = 0;
-			while(1)
-			{
-				ret = price-- * peo++;
-				if(ret == 3500)
-				{
-					prices[count++] = price;
-					if(count == 2)
-						break;
-				}
-			}
-			cout << (int)(min(prices[0], prices[1]) + 0.5) << endl;
-			break;
-		}
-		default: break;
-	}
-	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

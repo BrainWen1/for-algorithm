@@ -1,5 +1,5 @@
 // B3630 排队顺序
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -41,7 +41,7 @@ int main(void)
 	cout << endl;
 
 	return 0;
-}*/
+}
 
 // B3631 单向链表
 /*#include <iostream>

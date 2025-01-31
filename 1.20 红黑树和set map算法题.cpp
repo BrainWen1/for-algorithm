@@ -1,5 +1,5 @@
 // P2786 英语1（eng1）- 英语作文
-/*#include <iostream>
+#include <iostream>
 #include <map>
 #include <cctype>
 
@@ -42,7 +42,7 @@ int main(void)
 	cout << ret % p << endl;
 	
 	return 0;
-}*/
+}
 
 // P2234 [HNOI2002] 营业额统计
 /*#include <iostream>

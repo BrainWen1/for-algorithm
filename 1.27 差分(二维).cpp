@@ -1,5 +1,5 @@
 // NC226337.【模板】二维差分
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -45,7 +45,7 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 // P3397 地毯
 /*#include <iostream>

@@ -1,5 +1,5 @@
 // P1449 后缀表达式
-/*#include <iostream>
+#include <iostream>
 #include <stack>
 #include <cctype>
 
@@ -43,7 +43,7 @@ int main(void)
 	cout << nums.top() << endl;
 
 	return 0;
-}*/
+}
 
 // P1241 括号序列
 /*#include <iostream>
@@ -178,7 +178,7 @@ int main(void)
 }*/
 
 // B3616 【模板】队列
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -233,7 +233,7 @@ int main(void)
 			default: break;
 		}
 	}
-}*/
+}
 
 // P1540 [NOIP2010 提高组] 机器翻译
 /*#include <iostream>

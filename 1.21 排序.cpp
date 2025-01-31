@@ -1,5 +1,5 @@
 // 插入排序 Insert sort
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -34,10 +34,10 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // 选择排序 Selection sort
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -75,10 +75,10 @@ int main(void)
 	
 	for(int i = 1; i <= n; i++) cout << a[i] << ' ';
 	cout << endl;
-}*/
+}
 
 // 冒泡排序 Bubble sort
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -116,7 +116,7 @@ void Bubble_sort_pro()
 				flag = 0;
 			}
 		}
-		if(flag) return;
+		if(flag) return;//优化冒泡排序 
 	}
 }
 
@@ -132,10 +132,10 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // 堆排序 Heap sort
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -143,7 +143,7 @@ const int N = 1e5 + 10;
 int n;
 int a[N];
 
-void down(int parent, int end)
+void down(int parent, int end)//向下调整算法 
 {
 	int child = parent * 2;
 	
@@ -183,10 +183,10 @@ int main(void)
 	cout << endl;
 
 	return 0;
-}*/
+}
 
 // 快速排序 Quick sort
-/*#include <iostream>
+#include <iostream>
 #include <ctime>
 #include <algorithm>
 
@@ -214,7 +214,7 @@ void Quick_sort(int left, int right)
 		else if(a[i] == pivot) i++;
 		else swap(a[--r], a[i]);
 	}
-	//[left, l] [l + 1, r - 1] [r, right]
+	//划分区间: [left, l] [l + 1, r - 1] [r, right]
 	Quick_sort(left, l);
 	Quick_sort(r, right);
 }
@@ -233,10 +233,10 @@ int main(void)
 	cout << endl;
 
 	return 0;
-}*/
+}
 
 // 归并排序 Merge sort
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -280,4 +280,4 @@ int main(void)
 	cout << endl;
 
 	return 0;
-}*/
+}

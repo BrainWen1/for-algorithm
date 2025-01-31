@@ -1,5 +1,6 @@
+//STLÖÐµÄºìºÚÊ÷ 
 // set multiset
-/*#include <iostream>
+#include <iostream>
 #include <set>
 
 using namespace std;
@@ -55,11 +56,11 @@ int main(void)
 	cout << mp3.count(10) << endl;
 	
 	return 0;
-}*/
+}
 
 
 // map multimap
-/*#include <iostream>
+#include <iostream>
 #include <map>
 
 using namespace std;
@@ -126,4 +127,4 @@ int main(void)
 	cout << mp5.count("wenbin") << endl;
 	
 	return 0;
-}*/
+}

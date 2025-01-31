@@ -1,5 +1,5 @@
 // NC226303.【模板】差分
-/*#include <bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -35,7 +35,7 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // P3406 海底高铁
 /*#include <iostream>

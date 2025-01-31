@@ -1,5 +1,5 @@
 // 283.移动零
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <vector>
 
@@ -36,7 +36,7 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // 75.颜色分类
 /*#include <iostream>

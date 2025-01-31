@@ -2,7 +2,7 @@
 // 二叉树的存储
 // 顺序存储 -> 搜索和遍历时需用到二叉树的父子编号性质:
 // i的左孩子:2 * i,右孩子:2 * i + 1,父亲:i / 2(整数除法)
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -19,10 +19,10 @@ int main(void)
 		tree[i] = i;
 	}
 	return 0;
-}*/
+}
 
 // 链式存储
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -39,13 +39,13 @@ int main(void)
 		cin >> left[i] >> right[i];
 	}
 	return 0;
-}*/
+}
 
 
 // 二叉树的遍历
 // 使用链式存储搜索遍历时更直观
 // 深度优先搜索 DFS
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -93,10 +93,10 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // 广度优先搜索 BFS
-/*#include <iostream>
+#include <iostream>
 #include <queue>
 
 using namespace std;
@@ -133,4 +133,4 @@ int main(void)
 	Bfs(1);
 	
 	return 0;
-}*/
+}

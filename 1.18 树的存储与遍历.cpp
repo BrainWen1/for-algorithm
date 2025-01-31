@@ -1,7 +1,7 @@
 // 树
 // 孩子表示法
 // vector数组实现
-/*#include <iostream>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -23,10 +23,10 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
-// 链表前向星实现
-/*#include <iostream>
+// 链式前向星实现
+#include <iostream>
 
 using namespace std;
 
@@ -57,12 +57,12 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 
 // 深度优先搜索 DFS遍历树
 // 遍历vector数组实现的树
-/*#include <iostream>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -101,10 +101,10 @@ int main(void)
 	Dfs(1);
 
 	return 0;
-}*/
+}
 
 // 遍历链表前向星实现的树
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -151,12 +151,12 @@ int main(void)
 	Dfs(1);
 	
 	return 0;
-}*/
+}
 
 
 // 广度优先搜索 BFS遍历树
 // 遍历vector数组实现的树
-/*#include <iostream>
+#include <iostream>
 #include <queue>
 
 using namespace std;
@@ -203,10 +203,10 @@ int main(void)
 	Bfs(1);
 	
 	return 0;
-}*/
+}
 
 // 遍历链表向前星实现的树
-/*#include <iostream>
+#include <iostream>
 #include <queue>
 
 using namespace std;
@@ -262,70 +262,4 @@ int main(void)
 	Bfs(1);
 	
 	return 1;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

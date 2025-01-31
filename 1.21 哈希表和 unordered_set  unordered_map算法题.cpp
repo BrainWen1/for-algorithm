@@ -1,5 +1,5 @@
 // P5266 【深基17.例6】学籍管理
-/*#include <iostream>
+#include <iostream>
 #include <string>
 #include <unordered_map>
 
@@ -48,7 +48,7 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 // P4305 [JLOI2011] 不重复数字
 /*#include <iostream>

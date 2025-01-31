@@ -1,5 +1,5 @@
 // NC226282【模板】前缀和
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -29,7 +29,7 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 // P1115 最大子段和
 /*#include <bits/stdc++.h>

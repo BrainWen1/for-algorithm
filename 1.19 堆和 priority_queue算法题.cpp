@@ -1,5 +1,5 @@
 // P3378 ¡¾Ä£°å¡¿¶Ñ
-/*#include <iostream>
+#include <iostream>
 #include <queue>
 
 using namespace std;
@@ -26,7 +26,7 @@ int main(void)
 			heap.pop();
 	}
 	return 0;
-}*/
+}
 
 // NC214362.µÚkÐ¡
 /*#include <iostream>

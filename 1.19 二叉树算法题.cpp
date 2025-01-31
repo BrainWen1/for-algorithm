@@ -1,5 +1,5 @@
 // B3642 二叉树的遍历
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -47,7 +47,7 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // P4913 【深基16.例3】二叉树深度
 /*#include <iostream>
@@ -243,83 +243,3 @@ int main(void)
 	
 	return 0;
 }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 // P1601 A+B Problem（高精）
-/*include <iostream>
+include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -46,10 +46,10 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // P2142 高精度减法
-/*#include <iostream>
+#include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -108,10 +108,10 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // P1303 A*B Problem
-/*#include <iostream>
+#include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -151,10 +151,10 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}
 
 // P1480 A/B Problem
-/*#include <iostream>
+#include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -186,4 +186,4 @@ int main(void)
 	cout << endl;
 	
 	return 0;
-}*/
+}

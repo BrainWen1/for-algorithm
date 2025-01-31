@@ -1,5 +1,5 @@
 // ¶Ñ
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 
 using namespace std;
@@ -74,10 +74,10 @@ int main(void)
 	}
 	
 	return 0;
-}*/
+}
 
 // STL ÖÐµÄ¶Ñ priority_queue
-/*#include <iostream>
+#include <iostream>
 #include <queue>//priority_queue
 
 using namespace std;
@@ -173,4 +173,4 @@ int main(void)
 	test_3();
 	
 	return 0;
-}*/
+}

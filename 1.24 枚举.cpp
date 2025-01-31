@@ -1,5 +1,5 @@
 // P1003 [NOIP2011 提高组] 铺地毯
-/*#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -30,7 +30,7 @@ int main(void)
 	cout << search() << endl;
 	
 	return 0;
-}*/
+}
 
 // P2010 [NOIP2016 普及组] 回文日期
 /*#include <iostream>//最优解
