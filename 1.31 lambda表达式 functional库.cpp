@@ -1,13 +1,13 @@
 #include <iostream>
 #include <algorithm>
-#include <functional>
+#include <functional>//functional函数库 
 
 using namespace std;
 
 int main(void)
 {
     auto square = [](int num){ return num * num; };//lambda表达式 
-    int result = square(4);
+    int result = square(4);//square作为变量调用lambda表达式定义的函数 
     cout << result << endl;
     
     cout << sizeof(square) << endl;//无捕获变量->1字节 
