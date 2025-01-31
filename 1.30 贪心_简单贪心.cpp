@@ -25,7 +25,7 @@ int main(void)
 }
 
 // P1115 最大子段和
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 
 using namespace std;
@@ -51,10 +51,10 @@ int main(void)
 	cout << ret << endl;
 	
 	return 0;
-}*/
+}
 
 // P1094 [NOIP2007 普及组] 纪念品分组
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 
 using namespace std;
@@ -90,10 +90,10 @@ int main(void)
 	cout << count << endl;
 	
 	return 0;
-}*/
+}
 
 // P1056 [NOIP2008 普及组] 排座椅
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 
 using namespace std;
@@ -140,10 +140,10 @@ int main(void)
 	for(int i = 1; i <= l; i++) cout << col[i].index << ' '; cout << endl;
 	
 	return 0;
-}*/
+}
 
 // NC200190.矩阵消除游戏
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 
@@ -203,4 +203,4 @@ int main(void)
 	cout << ret << endl;
 	
 	return 0;
-}*/
+}
