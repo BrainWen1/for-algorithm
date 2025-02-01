@@ -1,4 +1,4 @@
-// P1226 【模板】快速幂
+// P1226【模板】快速幂
 #include <iostream>
 
 using namespace std;
@@ -25,7 +25,7 @@ int main(void)
 	return 0;
 }
 
-// P10446 64位整数乘法
+// P10446.64位整数乘法
 #include <iostream>
 
 using namespace std;
