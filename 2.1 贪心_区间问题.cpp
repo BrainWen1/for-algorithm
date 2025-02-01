@@ -1,4 +1,4 @@
-// P1803 ÁèÂÒµÄyyy / Ïß¶Î¸²¸Ç
+// P1803.ÁèÂÒµÄyyy / Ïß¶Î¸²¸Ç
 #include <iostream>
 #include <algorithm>
 
@@ -102,7 +102,7 @@ int main(void)
 	return 0;
 }
 
-// P2887 [USACO07NOV] Sunscreen G
+// P2887.[USACO07NOV] Sunscreen G
 #include <iostream>
 #include <algorithm>
 
@@ -153,7 +153,7 @@ int main(void)
 	return 0;
 }
 
-// P2859 [USACO06FEB] Stall Reservations S
+// P2859.[USACO06FEB] Stall Reservations S
 #include <iostream>
 #include <algorithm>
 #include <queue>
