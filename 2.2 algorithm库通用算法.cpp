@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -121,6 +122,18 @@ int main(void)
 	cout << str << endl;
 	reverse(str.begin(), str.end());//reverse反转字符串string 
 	cout << str << endl << endl;
+	
+	int p[10] = { 1, 4, 4, 6, 7, 7, 8, 12, 13, 12};//12 13 12 无序，故无法正确去重 
+	itend = unique(p, p + 10);//unique去重函数->要求范围内为有序序列->将重复元素移至末尾，最终返回last迭代器 
+	for(auto it = p; it != itend; it++) cout << *it << ' ';
+	cout << endl << endl;
+	
+	int q[10] = { -4, -1, 1, 4, 5, 9, 9, 12, 13, 12 };
+	itend = unique(q, q + 10, [](int& a, int& b)->bool{
+		return abs(a) == abs(b);//unique自定义函数调整对'重'的定义->绝对值相等 
+	});
+	for(auto it = q; it != itend; it++) cout << *it << ' ';
+	cout << endl << endl;
 	
 	return 0;
 }
