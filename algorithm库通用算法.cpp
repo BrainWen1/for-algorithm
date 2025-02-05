@@ -190,7 +190,7 @@ int main(void)
 		});
 		cout << endl;
 		
-		shuffle(w, w + 10, seed);//shuffle->随机重排算法 
+		shuffle(w, w + 10, seed);//shuffle->随机重排算法->seed为随机生成算法对象 
 	}
 	cout << endl << endl;
 	
