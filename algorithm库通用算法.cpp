@@ -2,6 +2,8 @@
 #include <algorithm>
 #include <string>
 #include <cmath>
+#include <vector>
+#include <random>
 
 using namespace std;
 
@@ -155,6 +157,48 @@ int main(void)
 	for_each(t, t + 10, [](int& num){
 		cout << num << ' ';
 	});
+	cout << endl << endl;
+	
+	int u[5] = { 9, -1, 3, 3, 4 };
+	
+	auto endit = remove(u, u + 5, 3);//remove->将不匹配的元素向前覆盖，不会真正改变容器大小，返回新的逻辑末尾 
+	
+	for_each(u, endit, [](int& num){// 9 -1 4
+		cout << num << ' ';
+	});
+	cout << endl;
+	
+	int  v[6] = { 8, -2, 3, 4, 1, 0 };
+	
+	rotate(v, v + 2, v + 6);//rotate(left, mid, right)->旋转->交换[left, mid)和[mid + 1, right) 
+	
+	for_each(v, v + 6, [](int& num){// 3 4 1 0 | 8 -2 
+		cout << num << ' ';
+	});
+	cout << endl << endl;
+	
+	int w[10] = { 5, 0, 1, 6, -3, 12, 9, 66, 2, -11 };
+	int N = 5;
+	
+	random_device rd;
+    mt19937 seed(rd());
+    
+	while(N--)
+	{
+		for_each(w, w + 10, [](int& num){
+			cout << num << ' ';
+		});
+		cout << endl;
+		
+		shuffle(w, w + 10, seed);//shuffle->随机重排算法 
+	}
+	cout << endl << endl;
+	
+	if(is_sorted(w, w + 10)) cout << "w array: is sorted" << endl;//is_sorted->判断范围内元素是否有序(默认升序，可借助自定义函数调整) 
+	else cout << "w array: is not sorted" << endl;
+	
+	if(is_sorted(t, t + 10)) cout << "t array: is sorted" << endl;
+	else cout << "t array: is not sorted" << endl;
 	
 	return 0;
 }
