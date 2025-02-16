@@ -1,28 +1,50 @@
-#创建类
+#创建基类
 class student:
     def __init__(self, name, sex, age):
         self.name = name
         self.sex = sex
         self.age = age
         self.scores = {"chinese": 0, "math": 0, "english": 0}
+        self.work = ""
+
     def print_info(self):
         print("name: " + self.name)
         print("sex:  " + self.sex)
         print("age:  " + self.age)
         print("chinese score: {0}\nmath score: {1}\nenglish score: {2}".format(self.scores["chinese"], self.scores["math"], self.scores["english"]))
         # print(f"chinese score: {self.scores["chinese"]}\nmath score: {self.scores["math"]}\nenglish score: {self.scores["english"]}")
+        print(f"work level: {self.work}")
+
     def change(self, course, score):
         self.scores[course] = score
-    
-wo = student("wenbin", "man", "18") # 创建类对象
-wo.print_info() # 调用打印函数
 
-for i in range(0, 3):
-    course = input("要修改的科目: ")
-    score = input("该科成绩: ")
+#继承基类student
+class CollegeStudent(student):
+    def __init__(self, name, sex, age):
+        super().__init__(name, sex, age)
+        self.work = "hard"
+
+class PupilStudent(student):
+    def __init__(self, name, sex, age):
+        super().__init__(name, sex, age)
+        self.work = "simple"
+
+#动态语言特性实现多态
+def printInfo(student_obj):
+    student_obj.print_info()
+    print("-" * 20)
+
+#测试(main函数)
+wo = CollegeStudent("wenbin", "man", "18") # 创建类对象
+printInfo(wo) # 调用打印函数
+
+for course, score in wo.scores.items():
+    print(f"{course}: ", end='')
+    score = input()
     wo.change(course, score)
+print('-' * 20)
 
-wo.print_info()
+printInfo(wo)
 
 # #字符串拼接
 # print("Hello " + "Python" + '!')
