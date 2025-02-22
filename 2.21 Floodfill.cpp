@@ -88,6 +88,7 @@ int main(void)
 }
 
 //P1162 填涂颜色
+//解决1:
 #include <iostream>
 #include <queue>
 
@@ -147,6 +148,80 @@ int main(void)
             if(0 == a[i][j] && false == st[i][j]) {
                 a[i][j] = 2;
             }
+            std::cout << a[i][j] << ' ';
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+//解决2:
+#include <iostream>
+#include <queue>
+
+const int N = 30 + 5;
+int n, m;
+int a[N][N];
+
+//矩阵移动方向向量
+int dx[] = { 0, 0, 1,-1 };
+int dy[] = { 1,-1, 0, 0 };
+
+void bfs()
+{
+    std::queue<std::pair<int, int>> que;
+    que.push({0, 0});
+    a[0][0] = 0;
+
+    while(que.size()) {
+        //拿出队头元素
+        auto tmp = que.front();
+        que.pop();
+        int i = tmp.first, j = tmp.second;
+
+        //枚举四种移动方式
+        for(int k = 0; k < 4; k++) {
+            int x = i + dx[k];
+            int y = j + dy[k];
+
+            //可行性剪枝
+            if(x < 0 || x > n + 1 || y < 0 || y > n + 1 || a[x][y] == 1 || a[x][y] == 0) {
+                continue;
+            }
+
+            //合法位置(外围2)置为0并入队
+            a[x][y] = 0;
+            que.push({x, y});
+        }
+    }
+}
+
+int main(void)
+{
+    std::cin >> n;
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= n; j++) {
+            std::cin >> a[i][j];
+            if(0 == a[i][j]) {
+                a[i][j] = 2;
+            }
+        }
+    }
+
+    //在矩阵外围加一圈0,并从(0, 0)开始BFS,则可以只用一次BFS就能访问所有非圈内0
+    for(int i = 0; i <= n + 1; i++) {
+        for(int j = 0; j <= n + 1; j++) {
+            if(0 == a[i][j]) {
+                a[i][j] = 2;
+            }
+        }
+    }
+
+    bfs();
+
+    //遍历矩阵,查找圈内0将其修改为2并输出矩阵
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= n; j++) {
             std::cout << a[i][j] << ' ';
         }
         std::cout << std::endl;
