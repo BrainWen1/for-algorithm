@@ -1,6 +1,5 @@
-//完全背包
 //NC226516【模板】完全背包
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 
@@ -48,9 +47,9 @@ int main(void) {
         std::cout << memo[n][m] << std::endl;
     }
     return 0;
-}*/
+}
 //空间优化
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 
@@ -92,10 +91,10 @@ int main(void) {
         std::cout << memo[m] << std::endl;
     }
     return 0;
-}*/
+}
 
 //P1616 疯狂的采药
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 
 typedef long long LL;
@@ -125,10 +124,10 @@ int main(void) {
     std::cout << memo[m] << std::endl;
 
     return 0;
-}*/
+}
 
 //P2918 [USACO08NOV] Buying Hay S
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 
@@ -162,9 +161,9 @@ int main(void) {
     std::cout << memo[n][m] << std::endl;
 
     return 0;
-}*/
+}
 //空间优化
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 
@@ -198,7 +197,7 @@ int main(void) {
     std::cout << memo[m] << std::endl;
 
     return 0;
-}*/
+}
 
 //P5662 [CSP-J2019] 纪念品
 #include <iostream>
@@ -224,6 +223,46 @@ int solve(int pre[], int nex[], int mon) {
         }
     }
     return mon + memo[n][mon];
+}
+
+int main(void) {
+    std::cin >> t >> n >> m;
+
+    for(int i = 1; i <= t; ++i) {
+        for(int j = 1; j <= n; ++j) {
+            std::cin >> a[i][j];
+        }
+    }
+
+    //贪心拿到每一天的最大利润
+    for(int i = 1; i < t; i++) {
+        m = solve(a[i], a[i + 1], m);
+    }
+    std::cout << m << std::endl;
+
+    return 0;
+}
+//空间优化
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+
+const int N = 100 + 10, M = 1e4 + 10;
+int t, n, m;
+int a[N][N], memo[M];
+
+//动态规划 完全背包dp
+int solve(int pre[], int nex[], int mon) {
+    memset(memo, 0, sizeof(memo));
+    //状态表示：memo[i][j] -> 从前 i 个物品中挑选出总价格不超过 j 的物品买入, 并在后一天部分卖出的最大利润
+    //状态转移：memo[i][j] -> 一：不买 pre[i], memo[i - 1][j]; 二：买 pre[i], memo[i][j - pre[i]] + nex[i] - pre[i]; 取二者最大值
+    //拓扑顺序：由于需要使用上一行和当前行左边的数据, 故需从上到下、从左到右
+    for(int i = 1; i <= n; ++i) {
+        for(int j = pre[i]; j <= mon; ++j) {
+            memo[j] = std::max(memo[j], memo[j - pre[i]] + nex[i] - pre[i]);
+        }
+    }
+    return mon + memo[mon];
 }
 
 int main(void) {
