@@ -1,6 +1,5 @@
-//区间dp
 //P1435 [IOI 2000] 回文字串
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <string>
 
@@ -30,10 +29,10 @@ int main(void) {
     std::cout << memo[1][n] << std::endl;
 
     return 0;
-}*/
+}
 
 //P2858 [USACO06FEB] Treats for the Cows G/S
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 
 const int N = 2e3 + 10;
@@ -60,10 +59,10 @@ int main(void) {
     std::cout << memo[1][n] << std::endl;
 
     return 0;
-}*/
+}
 
 //P1775 石子合并（弱化版）
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 
@@ -102,10 +101,10 @@ int main(void) {
     std::cout << memo[1][n] << std::endl;
 
     return 0;
-}*/
+}
 
 //P1880 [NOI1995] 石子合并
-/*#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
 
@@ -160,6 +159,39 @@ int main(void) {
     std::cout << maxret << std::endl;
 
     return 0;
-}*/
+}
 
-//
+//P3146 [USACO16OPEN] 248 G
+#include <iostream>
+#include <algorithm>
+
+const int N = 248 + 10;
+int n;
+int a[N], memo[N][N];
+
+int main(void) {
+    std::cin >> n;
+
+    int ret = 0;
+    for(int i = 1; i <= n; ++i) {
+        std::cin >> a[i];
+        memo[i][i] = a[i];
+        ret = std::max(ret, a[i]);
+    }
+
+    for(int len = 2; len <= n; ++len) {
+        for(int l = 1; l + len - 1 <= n; ++l) {
+            int r = l + len - 1;
+
+            for(int k = l; k < r; ++k) {
+                if(memo[l][k] != 0 && memo[l][k] == memo[k + 1][r]) {
+                    memo[l][r] = std::max(memo[l][r], memo[l][k] + 1);
+                }
+            }
+            ret = std::max(ret, memo[l][r]);
+        }
+    }
+    std::cout << ret << std::endl;
+
+    return 0;
+}
