@@ -1,6 +1,6 @@
 //单调队列 Monotonic Queue
 //P1886 滑动窗口 /【模板】单调队列
-/*#include <iostream>
+#include <iostream>
 #include <deque>
 
 const int N = 1e6 + 10;
@@ -55,7 +55,7 @@ int main(void) {
     std::cout << std::endl;
 
     return 0;
-}*/
+}
 
 //P2251 质量检测
 #include <iostream>
