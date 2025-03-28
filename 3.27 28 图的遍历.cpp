@@ -117,3 +117,43 @@ int main(void) {
 
     return 0;
 }
+
+//BFS
+//邻接矩阵
+#include <iostream>
+#include <cstring>
+#include <queue>
+
+const int N = 1e3 + 10;
+int n, m;
+int graph[N][N];
+bool st[N];
+
+void bfs(int root) {
+    std::cout << root << std::endl;
+    st[root] = true;
+
+    for(int i = 1; i <= n; ++i) {
+        if(graph[root][i] != -1 && st[i] == false) {
+            dfs(i);
+        }
+    }
+}
+
+int main(void) {
+    memset(graph, -1, sizeof(graph));
+
+    std::cin >> n >> m;
+
+    for(int i = 1; i <= m; ++i) {
+        int a, b, val;
+        std::cin >> a >> b >> val;
+
+        graph[a][b] = val;
+        graph[b][a] = val;
+    }
+
+    bfs(1);
+
+    return 0;
+}
