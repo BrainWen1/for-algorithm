@@ -7,8 +7,8 @@ int n, m, ret;
 int graph[N][N];
 bool st[N];
 
-void dfs(int root) {
-
+void prim() {
+    
 }
 
 int main(void) {
@@ -16,6 +16,7 @@ int main(void) {
 
     std::cin >> n >> m;
 
+    //读入图
     int x, y, z;
     for(int i = 1; i <= m; ++i) {
         std::cin >> x >> y >> z;
@@ -24,7 +25,8 @@ int main(void) {
         graph[y][x] = z;
     }
 
-    dfs(x);
+    //求出最小生成树并得出带权路径和
+    int ret = prim();
 
     return 0;
 }
