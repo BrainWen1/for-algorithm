@@ -8,7 +8,7 @@ int graph[N][N];
 bool st[N];
 
 void prim() {
-    
+    int t = 0;
 }
 
 int main(void) {
