@@ -15,7 +15,7 @@ int main(void)
 	cout << count(a, a + 10, 9) << endl;//2
 	cout << *(find(a, a + 10, 6) + 1) << endl;//4
 	cout << count(a, a + 10, 10) << endl;//0
-	cout << *find(a, a + 10, 10) << endl;//·µ»Ølastµü´úÆ÷£¬½âÒýÓÃÎªËæ»úÊý 
+	cout << *find(a, a + 10, 10) << endl;//ï¿½ï¿½ï¿½ï¿½lastï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ 
 	
 	int b[10] = { 0 };
 	copy(a, a + 10, b);//copy
@@ -27,13 +27,13 @@ int main(void)
 		return num % 2 == 0;//count_if
 	}) << endl;
 	
-	sort(b, b + 10);//sortÄ¬ÈÏÉýÐò 
+	sort(b, b + 10);//sortÄ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 	cout << "b->" << endl;
 	for_each(b, b + 10, [](int& num){
 		cout << num << ' ';
 	}); cout << endl;
 	
-	sort(b, b + 10, [](int& l, int& r)->bool{//sort×Ô¶¨Òå½µÐò 
+	sort(b, b + 10, [](int& l, int& r)->bool{//sortï¿½Ô¶ï¿½ï¿½å½µï¿½ï¿½ 
 		return l > r;
 	});
 	cout << "b->" << endl;
@@ -47,30 +47,30 @@ int main(void)
 		int index;
 	};
 	node c[5] = { {1,1}, {6,4}, {4,3}, {6,2}, {12,5} };
-	stable_sort(c, c + 5, [](const node& l, const node& r)->bool{//stable_sortÐèÒª´«ÈëconstÒýÓÃÒÔÆõºÏÆäÎÈ¶¨ÐÔÅÅÐò¹æÔò 
-		return l.val < r.val;//stable_sort°´valÖµÉýÐòÅÅÁÐ£¬²¢±£³ÖÏàµÈÔªËØÔ­Ïà¶ÔÎ»ÖÃ 
+	stable_sort(c, c + 5, [](const node& l, const node& r)->bool{//stable_sortï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½constï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+		return l.val < r.val;//stable_sortï¿½ï¿½valÖµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ô­ï¿½ï¿½ï¿½Î»ï¿½ï¿½ 
 	});
 	cout << "c->" << endl;
 	for_each(c, c + 5, [](node& nd){
-		cout << nd.val << " -> " << nd.index << endl;//ÑéÖ¤ÎÈ¶¨ÐÔ 
+		cout << nd.val << " -> " << nd.index << endl;//ï¿½ï¿½Ö¤ï¿½È¶ï¿½ï¿½ï¿½ 
 	});
 	
-	sort(a, a + 10);//ÉýÐò 
-	//binary_searchÄ¬ÈÏ²éÕÒ·½Ê½ÎªÉýÐò(a array) 
+	sort(a, a + 10);//ï¿½ï¿½ï¿½ï¿½ 
+	//binary_searchÄ¬ï¿½Ï²ï¿½ï¿½Ò·ï¿½Ê½Îªï¿½ï¿½ï¿½ï¿½(a array) 
 	if(binary_search(a, a + 10, 5)) cout << "5 is existing int a array" << endl;
 	if(binary_search(a, a + 10, 10)) cout << "10 is existing int a array" << endl;
-	//¿É×Ô¶¨Òåº¯ÊýÖ¸¶¨binary_search²éÕÒ·½Ê½Îª½µÐò(b array) 
+	//ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½Ö¸ï¿½ï¿½binary_searchï¿½ï¿½ï¿½Ò·ï¿½Ê½Îªï¿½ï¿½ï¿½ï¿½(b array) 
 	if(binary_search(b, b + 10, 1, [](int l, int r)->bool{
 		return l > r;
 	})) cout << "1 is existing in b array" << endl << endl;
 	
-	cout << *lower_bound(a, a + 10, 4) << endl;//lower_bound²éÕÒ´óÓÚµÈÓÚ4µÄÖµµÄÎ»ÖÃ 
-	cout << *upper_bound(a, a + 10, 3) << endl;//upper_bound²éÕÒ´óÓÚ3µÄÖµµÄÎ»ÖÃ 
+	cout << *lower_bound(a, a + 10, 4) << endl;//lower_boundï¿½ï¿½ï¿½Ò´ï¿½ï¿½Úµï¿½ï¿½ï¿½4ï¿½ï¿½Öµï¿½ï¿½Î»ï¿½ï¿½ 
+	cout << *upper_bound(a, a + 10, 3) << endl;//upper_boundï¿½ï¿½ï¿½Ò´ï¿½ï¿½ï¿½3ï¿½ï¿½Öµï¿½ï¿½Î»ï¿½ï¿½ 
 	
 	int d[5] = { 1, 5, 6, 8, 12};
 	int e[5] = { 2, 4, 5, 7, 12};
 	int f[10] = { 0 };
-	auto itend = set_union(d, d + 5, e, e + 5, f);//¼¯ºÏ²Ù×÷set_union->·ÖÖÎË¼ÏëºÏ²¢Á½¸öÓÐÐòÊý×é(Ä¬ÈÏÉýÐò)Îª²¢¼¯£¬Í¬Ê±È¥ÖØ 
+	auto itend = set_union(d, d + 5, e, e + 5, f);//ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½set_union->ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±È¥ï¿½ï¿½ 
 	for(auto it = f; it != itend; it++) cout << *it << ' ';
 	cout << endl << endl;
 	
@@ -78,23 +78,23 @@ int main(void)
 	int h[5] = { 23, 14, 8, 3, -1 };
 	int j[10] = { 0 };
 	itend = set_union(g, g + 5, h, h + 5, j, [](int& l, int& r)->bool{
-		return l > r;//set_union¿É×Ô¶¨Òåº¯Êýµ÷ÕûÎª½µÐò 
+		return l > r;//set_unionï¿½ï¿½ï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ 
 	});
 	for(auto it = j; it != itend; it++) cout << *it << ' ';
 	cout << endl << endl;
 	
-	itend = set_intersection(d, d + 5, e, e + 5, f);//¼¯ºÏ²Ù×÷set_intersection->ºÏ²¢Á½¸öÓÐÐòÊý×é(Ä¬ÈÏÉýÐò)Îª½»¼¯£¬Í¬Ê±È¥ÖØ 
+	itend = set_intersection(d, d + 5, e, e + 5, f);//ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½set_intersection->ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±È¥ï¿½ï¿½ 
 	for(auto it = f; it != itend; it++) cout << *it << ' ';
 	cout << endl << endl;
 	
 	itend = set_intersection(g, g + 5, h, h + 5, j, [](int& l, int& r)->bool{
-		return l > r;//set_intersectionÒ²¿É×Ô¶¨Òåº¯Êýµ÷ÕûÎª½µÐò 
+		return l > r;//set_intersectionÒ²ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ 
 	});
 	for(auto it = j; it != itend; it++) cout << *it << ' ';
 	cout << endl << endl;
 	
 	int k[10] = { 8, 3, 5, -2, 12, 5, 2, 9, 13, 12 };
-	replace(k, k + 10, 12, 6);//replace½«·¶Î§ÄÚËùÓÐ 12Ìæ»»Îª 6
+	replace(k, k + 10, 12, 6);//replaceï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 12ï¿½æ»»Îª 6
 	for_each(k, k + 10, [](int& num){
 		cout << num << ' ';
 	});
@@ -103,7 +103,7 @@ int main(void)
 	int m[10] = { 8, 3, 5, -2, 12, 5, 2, 9, 13, 12 };
 	replace_if(m, m + 10, [](int& num)->bool{
 		return num % 2 == 1;
-	}, 0);//replace_if½«·¶Î§ÄÚËùÓÐÂú×ãÌõ¼þ(ÆæÊý)ÔªËØÌæ»»ÎªÐÂÖµ(0) 
+	}, 0);//replace_ifï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½)Ôªï¿½ï¿½ï¿½æ»»Îªï¿½ï¿½Öµ(0) 
 	for_each(m, m + 10, [](int& num){
 		cout << num << ' ';
 	});
@@ -114,7 +114,7 @@ int main(void)
 		cout << num << ' ';
 	});
 	cout << endl;
-	reverse(n, n + 7);//reverse·´×ªÕûÐÍÊý×é 
+	reverse(n, n + 7);//reverseï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 	for_each(n, n + 7, [](int& num){
 		cout << num << ' ';
 	});
@@ -122,25 +122,25 @@ int main(void)
 	
 	string str = "iloveyoubaby.";
 	cout << str << endl;
-	reverse(str.begin(), str.end());//reverse·´×ª×Ö·û´®string 
+	reverse(str.begin(), str.end());//reverseï¿½ï¿½×ªï¿½Ö·ï¿½ï¿½ï¿½string 
 	cout << str << endl << endl;
 	
-	int p[10] = { 1, 4, 4, 6, 7, 7, 8, 12, 13, 12};//12 13 12 ÎÞÐò£¬¹ÊÎÞ·¨ÕýÈ·È¥ÖØ 
-	itend = unique(p, p + 10);//uniqueÈ¥ÖØº¯Êý->ÒªÇó·¶Î§ÄÚÎªÓÐÐòÐòÁÐ->½«ÖØ¸´ÔªËØÒÆÖÁÄ©Î²£¬×îÖÕ·µ»Ølastµü´úÆ÷ 
+	int p[10] = { 1, 4, 4, 6, 7, 7, 8, 12, 13, 12};//12 13 12 ï¿½ï¿½ï¿½ò£¬¹ï¿½ï¿½Þ·ï¿½ï¿½ï¿½È·È¥ï¿½ï¿½ 
+	itend = unique(p, p + 10);//uniqueÈ¥ï¿½Øºï¿½ï¿½ï¿½->Òªï¿½ï¿½Î§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½->ï¿½ï¿½ï¿½Ø¸ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä©Î²ï¿½ï¿½ï¿½ï¿½ï¿½Õ·ï¿½ï¿½ï¿½lastï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 	for(auto it = p; it != itend; it++) cout << *it << ' ';
 	cout << endl << endl;
 	
 	int q[10] = { -4, -1, 1, 4, 5, 9, 9, 12, 13, 12 };
 	itend = unique(q, q + 10, [](int& a, int& b)->bool{
-		return abs(a) == abs(b);//unique×Ô¶¨Òåº¯Êýµ÷Õû¶Ô'ÖØ'µÄ¶¨Òå->¾ø¶ÔÖµÏàµÈ 
+		return abs(a) == abs(b);//uniqueï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'ï¿½ï¿½'ï¿½Ä¶ï¿½ï¿½ï¿½->ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ 
 	});
 	for(auto it = q; it != itend; it++) cout << *it << ' ';
 	cout << endl << endl;
 	
-	//Óëset_union¶ÔÓ¦µÄ merge(ºÏ²¢ÓÐÐòÊý×éµ½Ö¸¶¨Î»ÖÃ)ºÍ inplace_merge(Ô­µØºÏ²¢Á¬ÐøÓÐÐòÊý×é) -> set_union»áÈ¥ÖØ, ºóÁ½¸ö²»»áÈ¥ÖØ 
+	//ï¿½ï¿½set_unionï¿½ï¿½Ó¦ï¿½ï¿½ merge(ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½éµ½Ö¸ï¿½ï¿½Î»ï¿½ï¿½)ï¿½ï¿½ inplace_merge(Ô­ï¿½ØºÏ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) -> set_unionï¿½ï¿½È¥ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ 
 	int r[10], s[10];
-	merge(d, d + 5, e, e + 5, r);//Ä¬ÈÏÉýÐò 
-	merge(g, g + 5, h, h + 5, s, [](int& l, int& r)->bool{//×Ô¶¨Òåº¯Êýµ÷ÕûÎª½µÐò 
+	merge(d, d + 5, e, e + 5, r);//Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	merge(g, g + 5, h, h + 5, s, [](int& l, int& r)->bool{//ï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ 
 		return l > r;
 	});
 	for_each(r, r + 10, [](int& num){
@@ -152,8 +152,8 @@ int main(void)
 	});
 	cout << endl << endl;
 	
-	int t[10] = { 1, 4, 9, 12, 67, 3, 6, 9, 11, 12 };//inplace_mergeÔ­µØºÏ²¢->Ä¬ÈÏÎªÉýÐò£¬Ò²¿ÉÒÔÊ¹ÓÃ×Ô¶¨Òåº¯Êýµ÷ÕûÎª½µÐò£¬²»×¸Êö 
-	inplace_merge(t, t + 5, t + 10);//×¢ÒâÈý¸ö²ÎÊý 
+	int t[10] = { 1, 4, 9, 12, 67, 3, 6, 9, 11, 12 };//inplace_mergeÔ­ï¿½ØºÏ²ï¿½->Ä¬ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ò£¬²ï¿½×¸ï¿½ï¿½ 
+	inplace_merge(t, t + 5, t + 10);//×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 	for_each(t, t + 10, [](int& num){
 		cout << num << ' ';
 	});
@@ -161,7 +161,7 @@ int main(void)
 	
 	int u[5] = { 9, -1, 3, 3, 4 };
 	
-	auto endit = remove(u, u + 5, 3);//remove->½«²»Æ¥ÅäµÄÔªËØÏòÇ°¸²¸Ç£¬²»»áÕæÕý¸Ä±äÈÝÆ÷´óÐ¡£¬·µ»ØÐÂµÄÂß¼­Ä©Î² 
+	auto endit = remove(u, u + 5, 3);//remove->ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ß¼ï¿½Ä©Î² 
 	
 	for_each(u, endit, [](int& num){// 9 -1 4
 		cout << num << ' ';
@@ -170,7 +170,7 @@ int main(void)
 	
 	int  v[6] = { 8, -2, 3, 4, 1, 0 };
 	
-	rotate(v, v + 2, v + 6);//rotate(left, mid, right)->Ðý×ª->½»»»[left, mid)ºÍ[mid + 1, right) 
+	rotate(v, v + 2, v + 6);//rotate(left, mid, right)->ï¿½ï¿½×ª->ï¿½ï¿½ï¿½ï¿½[left, mid)ï¿½ï¿½[mid + 1, right) 
 	
 	for_each(v, v + 6, [](int& num){// 3 4 1 0 | 8 -2 
 		cout << num << ' ';
@@ -190,11 +190,11 @@ int main(void)
 		});
 		cout << endl;
 		
-		shuffle(w, w + 10, seed);//shuffle->Ëæ»úÖØÅÅËã·¨->seedÎªËæ»úÉú³ÉËã·¨¶ÔÏó 
+		shuffle(w, w + 10, seed);//shuffle->ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨->seedÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ 
 	}
 	cout << endl << endl;
 	
-	if(is_sorted(w, w + 10)) cout << "w array: is sorted" << endl;//is_sorted->ÅÐ¶Ï·¶Î§ÄÚÔªËØÊÇ·ñÓÐÐò(Ä¬ÈÏÉýÐò£¬¿É½èÖú×Ô¶¨Òåº¯Êýµ÷Õû) 
+	if(is_sorted(w, w + 10)) cout << "w array: is sorted" << endl;//is_sorted->ï¿½Ð¶Ï·ï¿½Î§ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½(Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬¿É½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½åº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) 
 	else cout << "w array: is not sorted" << endl;
 	
 	if(is_sorted(t, t + 10)) cout << "t array: is sorted" << endl;
@@ -202,12 +202,3 @@ int main(void)
 	
 	return 0;
 }
-
-
-
-
-
-
-
-
-
